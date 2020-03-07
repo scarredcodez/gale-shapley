@@ -39,7 +39,7 @@ class Woman:
     
     def make_preference(self):
         self.preference = random.sample(men, len(men))
-        
+    
     #新たな求婚者と保留している男性の選好順位を比較して好きな方を選ぶ
     def choose(self, proposer):
         if self.prefer(proposer) < self.prefer(self.boyfriend):
@@ -49,7 +49,7 @@ class Woman:
             proposer.girlfriend = self
         else:
             proposer.favourite += 1
-            
+
 #b人の男性とg人の女性をマッチング
 def match(b, g):
     #b人の男性、g人の女性インスタンスを生成してリストに格納
